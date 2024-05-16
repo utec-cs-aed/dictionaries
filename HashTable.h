@@ -25,21 +25,14 @@ public:
     iterator begin();// Retorna el inicio del iterador             
     iterator end();// Retorna el final del iterador    
 
-private:    
-    struct Node {
-        TK value;
-        TV value;
-        //TODO
-    };
-    int capacity;
-    int size;
-    Node** array;
+private:       
+    int capacity;//capacidad del hash table
+    int size;//total de elementos
+    //TODO: completar los demas atributos
 
 public:    
     HashTable(int _cap=5): capacity(_cap), size(0)  {
-        array = new Node*[capacity];
-        for (int i = 0; i < capacity; i++)
-            array[i] = nullptr;
+       //TODO
     }
     void insert(TK key, TV value);    
     void insert(pair<TK, TV> item); 
