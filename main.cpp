@@ -58,6 +58,8 @@ void test_avl()
     avl->remove(100);
     ASSERT(avl->height() == 2, "The avl is not working");
     ASSERT(avl->getPreOrder() == "27 11 5 16 73 50 91 ", "The avl is not working");
+    
+    delete avl;
 }
 
 void test_hash(){
