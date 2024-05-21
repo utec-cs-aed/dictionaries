@@ -14,7 +14,7 @@ public:
     HashIterator<TK, TV> &operator=(HashIterator<TK, TV> other);
     bool operator!=(HashIterator<TK, TV> other); 
     HashIterator<TK, TV> &operator++();   //++it
-    TV operator*();
+    pair<TK,TV> operator*();
 };
 
 template <typename TK, typename TV>
