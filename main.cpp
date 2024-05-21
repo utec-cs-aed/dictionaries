@@ -88,7 +88,7 @@ void test_hash(){
     string result = "";
     HashTable<string, float>::iterator iteh = notas.begin();
     while(iteh != notas.end()) {
-        result += std::to_string(*iteh) + " ";
+        result += std::to_string((*iteh).first) + " ";
         ++iteh;
     }
     ASSERT(result == "Nancy Jorge Maria Pedro Teofilo Cecilia Marcos Ricardo Dina Ana Cesar Patricia ", "The hash table is not working");
