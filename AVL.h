@@ -10,7 +10,7 @@ template <typename T>
 class AVLTree
 { 
 public:
-    typedef BSTIterator<T> iterator; 
+    typedef AVLIterator<T> iterator; 
     iterator begin(AVLIterator<int>::Type _);// Retorna el inicio del iterador             
     iterator end();// Retorna el final del iterador
 
@@ -18,17 +18,17 @@ private:
     NodeAVL<T> *root;
 public:
     AVLTree() : root(nullptr) {}
-    void insert(T value);
-    bool find(T value);
+    void insert(T value);//O(log n)
+    bool find(T value);//O(log n)
     string getInOrder();
     string getPreOrder();
     string getPostOrder();
     int height();
-    T minValue();
-    T maxValue();
-    bool isBalanced();
+    T minValue();//O(log n)
+    T maxValue();//O(log n)
+    bool isBalanced();//O(n)
     int size();
-    void remove(T value); //Use el predecesor 
+    void remove(T value); //Use el predecesor para cuando el nodo a eliminar tiene dos hijos
 
     /*Adicionales*/
     T successor(T value); // Retornar el valor siguiente de "value" en el arbol
@@ -44,11 +44,11 @@ public:
 
 private:
     /*Rotaciones del AVL*/    
-    int balancingFactor(NodeAVL<T> *NodeAVL);
-    void updateHeight(NodeAVL<T> *NodeAVL);
-    void balance(NodeAVL<T> *&NodeAVL);
-    void left_rota(NodeAVL<T> *&NodeAVL); 
-    void right_rota(NodeAVL<T> *&NodeAVL); 
+    int balancingFactor(NodeAVL<T> *NodeAVL);//Obtiene el factor de balanceo O(1)
+    void updateHeight(NodeAVL<T> *NodeAVL);//Actualiza la altura de un nodo O(1) 
+    void balance(NodeAVL<T> *&NodeAVL);//Agoritmo principal que verifica el balanceo del nodo y aplica las rotaciones O(1)
+    void left_rota(NodeAVL<T> *&NodeAVL); //Rotación a la izquier O(1)
+    void right_rota(NodeAVL<T> *&NodeAVL); //Rotación a la derecha O(1)
 };
 
 
