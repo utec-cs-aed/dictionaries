@@ -14,4 +14,5 @@ struct NodeAVL {
         if (right) right->killSelf();
         delete this;
         }
+
 };
