@@ -13,6 +13,6 @@ struct NodeAVL {
         if (left) left->killSelf();
         if (right) right->killSelf();
         delete this;
-        }
+    }
 
 };
