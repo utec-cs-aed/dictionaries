@@ -1,9 +1,10 @@
 # Estructura de datos para gestionar eficientemente diccionarios
 
 ## Integrantes: 
-- 1 ____   _____
-- 2 ____   _____
-- 3 ____   _____
+- 1 Gianfranco Cordero
+- 2 Federico Iribar
+- 3 David Salaverry
+- 4 José Huamaní
 
 ## Instrucciones 
 
