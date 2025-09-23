@@ -1,10 +1,10 @@
-# Proyecto Aplicativo: Directorio Telefónico con Historial
+# Caso de Aplicación: Directorio Telefónico con Gestión Automática
 
 ## Objetivo
-Desarrollar un directorio telefónico que utilice HashTable y AVL para organizar contactos por letra inicial y mantener un historial temporal de los últimos contactos realizados.
+Desarrollar un directorio telefónico para organizar contactos por letra inicial y mantener automáticamente los contactos más utilizados mediante gestión eficiente de capacidad.
 
 ## Contexto
-Una empresa necesita un sistema de directorio telefónico que permita búsquedas rápidas por apellido y mantenga un registro temporal de los contactos más utilizados.
+Una empresa necesita un sistema de directorio telefónico que permita búsquedas rápidas por apellido y gestione automáticamente la capacidad del directorio, manteniendo los contactos más accedidos y eliminando los menos utilizados.
 
 ## Estructura del contacto
 ```cpp

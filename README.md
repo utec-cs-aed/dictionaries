@@ -8,14 +8,14 @@
 ## Instrucciones 
 
 ### Implementación requerida
-- **HashTable**: Diccionario completo con mantenimiento del orden de inserción
-- **AVL**: Árbol balanceado para almacenar únicamente las llaves del diccionario
-- **Aplicación práctica**: Implementar el caso de uso descrito en `Aplicacion.md`
+- **HashTable (6 pts)**: Diccionario completo con mantenimiento del orden de inserción
+- **AVL (7 pts)**: Árbol balanceado para almacenar únicamente las llaves del diccionario
+- **Aplicación práctica (7 pts)**: Implementar el caso de uso descrito en `Aplicacion.md`
 
 ### Requisitos de rendimiento
 - **HashTable**: Complejidad de acceso debe ser O(1). Mantener orden de inserción de forma eficiente.
-- **AVL**: Auto-balanceo O(1) para preservar inserción O(log n)
-- **Complejidad**: Cumplir complejidades algorítmicas vistas en clase.  Optimizar el uso de memoria y evitar desperdicio de espacio
+- **AVL**: Auto-balanceo para preservar inserción O(log n).
+- **Complejidad**: Cumplir complejidades algorítmicas vistas en clase. Optimizar el uso de memoria y evitar desperdicio de espacio.
 
 ### Restricciones y recomendaciones
 - **No usar STL**: vector, list, stack, queue, map, set, etc.
