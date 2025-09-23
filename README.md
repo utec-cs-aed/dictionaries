@@ -7,14 +7,24 @@
 
 ## Instrucciones 
 
-- Implementar todas las funciones de ambas estructuras de datos para manejar diccionarios:
-    HashTable y AVL (este ultimo solo va almacenar las llaves)
-- El HashTable debe **mantener el orden de inserción** de los elementos. Piense como gestionar el hashtable de manera eficiente bajo esta restricción. 
-- El AVL debe implementar todos los casos de auto-balanceo con complejidad O(1) con tal de mantener la complejidad de insercion O(log n)
-- Asegúrese que su implementación cumpla las complejidades algoritimicas discutidas en clase. 
-- No se permite el uso de estructuras de datos implementadas en el STL (vector, list, stack, queue, map, set, etc.)
-- No modificar el main.cpp
-- Asegurarse que pasen todos los tests
+### Implementación requerida
+- **HashTable**: Diccionario completo con mantenimiento del orden de inserción
+- **AVL**: Árbol balanceado para almacenar únicamente las llaves del diccionario
+- **Aplicación práctica**: Implementar el caso de uso descrito en `Aplicacion.md`
+
+### Requisitos de rendimiento
+- **HashTable**: Complejidad de acceso debe ser O(1). Mantener orden de inserción de forma eficiente.
+- **AVL**: Auto-balanceo O(1) para preservar inserción O(log n)
+- **Complejidad**: Cumplir complejidades algorítmicas vistas en clase.  Optimizar el uso de memoria y evitar desperdicio de espacio
+
+### Restricciones y recomendaciones
+- **No usar STL**: vector, list, stack, queue, map, set, etc.
+- **No modificar**: `main.cpp`
+- **Obligatorio**: Pasar todos los tests
+    > - Total de tests de HashTable: 11
+    > - Total de tests de AVL: 19
+- **Usar contenedores propios**: Implementar listas enlazadas, arrays dinámicos, pilas o colas según sea necesario
+- **Gestión de memoria**: Controlar manualmente la asignación y liberación de memoria (new y delete)
+- **Estructuras auxiliares**: Diseñar estructuras de apoyo que complementen HashTable y AVL eficientemente
     
-> - Total de tests de HashTable: 11
-> - Total de tests de AVL: 19
+

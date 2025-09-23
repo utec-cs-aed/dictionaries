@@ -1,10 +1,45 @@
 #ifndef AVLTree_H
 #define AVLTree_H
 #include <iostream>
-#include "AVL_Node.h"
-#include "AVL_Iterator.h"
-
 using namespace std;
+
+template <typename T>
+struct NodeAVL {
+    T data;
+    int height;
+    NodeAVL* left; 
+    NodeAVL* right;        
+    NodeAVL() : left(nullptr), right(nullptr), height(0) {}   
+    NodeAVL(T value) : data(value), left(nullptr), right(nullptr), height(0) {}   
+
+    void killSelf(){
+        if(left != nullptr) left->killSelf();
+        if(right != nullptr) right->killSelf();
+        delete this;
+    }
+};
+
+/*Forward Iterator for the AVL*/
+template <typename T>
+class AVLIterator
+{
+public:
+    enum Type {
+        PreOrder, InOrder, PostOrder, BFS
+    };
+private:
+    NodeAVL<T> *current;
+    Type type;
+public:
+    AVLIterator() : current(nullptr), type(InOrder) {};
+    AVLIterator(NodeAVL<T> *current, Type type=InOrder): type(type) {
+        //TODO
+    }
+    AVLIterator<T> &operator=(AVLIterator<T> other);
+    bool operator!=(AVLIterator<T> other);
+    AVLIterator<T> &operator++();   //++it
+    T operator*();
+};
 
 template <typename T>
 class AVLTree
